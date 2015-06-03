@@ -81,6 +81,7 @@ public class Board extends JPanel implements ActionListener {
 
             switch (key){
                 case KeyEvent.VK_ENTER:
+                    score.addScore(100);
                     break;
                     
                 case KeyEvent.VK_LEFT:
@@ -90,9 +91,11 @@ public class Board extends JPanel implements ActionListener {
                     break;
                     
                 case KeyEvent.VK_UP:
+                    score.addScore(10);
                     break;
                     
                 case KeyEvent.VK_DOWN:
+                    score.subScore(-10);
                     break;
             }
             
