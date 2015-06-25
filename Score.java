@@ -43,7 +43,7 @@ public class Score extends JPanel
     * @return     void
     */
     public void subScore(int points){
-        this.score = this.score + points;
+        this.score = this.score - points;
     }
     
     /**
