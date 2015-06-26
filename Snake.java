@@ -13,8 +13,8 @@ public class Snake extends JPanel
 {
     private String snake = "head.png";
 
-    private int dx;
-    private int dy;
+    private int dx = -1;
+    private int dy = 0;
     private int x;
     private int y;
     private Image image;
@@ -22,16 +22,35 @@ public class Snake extends JPanel
     public Snake() {
         ImageIcon ii = new ImageIcon("images/"+this.getClass().getResource(snake));
         image = ii.getImage();
-        x = 40;
-        y = 60;
+        x = 300;
+        y = 500;
     }
     
     public void move() {
         x += dx;
         y += dy;
+        
+        
     }
 
-    public int getX() {
+    
+    public int getDx() {
+		return dx;
+	}
+
+	public void setDx(int dx) {
+		this.dx = dx;
+	}
+
+	public int getDy() {
+		return dy;
+	}
+
+	public void setDy(int dy) {
+		this.dy = dy;
+	}
+
+	public int getX() {
         return x;
     }
 
@@ -43,4 +62,12 @@ public class Snake extends JPanel
         return image;
     }
 
+ public Image bodyCobra(){
+    	 ImageIcon ii = new ImageIcon(this.getClass().getResource("images/body.png"));
+       
+       
+         return  ii.getImage();
+    }
+    
+    
 }
